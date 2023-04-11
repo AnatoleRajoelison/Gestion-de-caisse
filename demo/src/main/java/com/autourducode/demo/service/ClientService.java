@@ -10,7 +10,7 @@ import java.util.List;
 @Service
 @AllArgsConstructor
 
-public class ClientServiceImplement{
+public class ClientService {
 
     private final ClientRepository clientRepository;
     public Client créer(Client client) {

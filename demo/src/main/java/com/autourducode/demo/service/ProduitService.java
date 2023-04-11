@@ -11,7 +11,7 @@ import java.util.List;
 @Service// elle demande a spring de considerer cette classe comme etant une classe qui contient un code metier
 @AllArgsConstructor
 
-public class ProduitServiceImplement{
+public class ProduitService {
 
     private final ProduitRepository produitRepository;
     public Produit créer(Produit produit) {
@@ -31,6 +31,8 @@ public class ProduitServiceImplement{
                     p.setStock(produit.getStock());
                     p.setFournisseur((produit.getFournisseur()));
                     p.setCodeBarre((produit.getCodeBarre()));
+                    p.setDateAjout(produit.getDateAjout());
+                    p.setImage(produit.getImage());
                     return produitRepository.save(p); // qui dit le resultat serait garder
                 }).orElseThrow(() -> new RuntimeException("produit non trouvé"));
     }
@@ -38,4 +40,5 @@ public class ProduitServiceImplement{
         produitRepository.deleteById(id);
         return "Produit supprimer";
     }
+
 }

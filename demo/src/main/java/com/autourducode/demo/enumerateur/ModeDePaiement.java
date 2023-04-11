@@ -1,2 +1,7 @@
-package com.autourducode.demo.enumerateur;public enum ModeDePaiement {
+package com.autourducode.demo.enumerateur;
+
+public enum ModeDePaiement {
+    Liquide,
+    Virement,
+    Carte
 }
