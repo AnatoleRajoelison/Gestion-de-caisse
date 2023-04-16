@@ -3,7 +3,6 @@ package com.autourducode.demo.service;
 import com.autourducode.demo.modele.Caisse;
 import com.autourducode.demo.modele.Transaction;
 import com.autourducode.demo.repository.CaisseRepository;
-import com.autourducode.demo.repository.TransactionRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -12,8 +11,6 @@ import java.util.List;
 @AllArgsConstructor
 public class CaisseService {
     private final CaisseRepository caisseRepository;
-    private final TransactionRepository transactionRepository;
-
     public Caisse créer(Caisse caisse) {
         return caisseRepository.save(caisse);
     }

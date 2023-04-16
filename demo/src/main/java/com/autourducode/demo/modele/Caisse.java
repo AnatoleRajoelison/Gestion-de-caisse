@@ -22,9 +22,9 @@ public class Caisse {
     @Column(length = 150)
     private String employéResponsable;
     private double solde;// solde actuel du caisse
-    @OneToOne(cascade = CascadeType.ALL)
+    @Embedded
     private InformationConnexion informationConnexion; // les informations de connexion pour accéder à la caisse
-    @OneToOne(mappedBy = "Caisse", cascade = CascadeType.ALL)
+    @Embedded
     private List<Transaction> transactions = new ArrayList<>();
 
 }

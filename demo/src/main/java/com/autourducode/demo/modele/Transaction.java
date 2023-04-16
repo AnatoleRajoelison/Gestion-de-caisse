@@ -6,10 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.Date;
-import java.util.List;
-
-@Entity
-@Table(name = "Transaction")
+@Embeddable
 @Getter
 @Setter
 public class Transaction {
